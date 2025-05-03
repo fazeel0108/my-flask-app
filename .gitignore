@@ -1,0 +1,28 @@
+# Ignore system files
+AppData/
+.vscode/
+*.log
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore IDE specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore virtual environment folders
+venv/
+
+# Ignore Windows system folders that are often inaccessible
+AppData/
+Desktop/
+Documents/
+Favorites/
+Links/
+Music/
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
