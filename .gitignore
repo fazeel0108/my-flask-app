@@ -16,11 +16,8 @@ venv/
 
 # Ignore Windows system folders that are often inaccessible
 AppData/
-Desktop/
-Documents/
 Favorites/
 Music/
-OneDrive/
 Pictures/
 Saved Games/
 Searches/
