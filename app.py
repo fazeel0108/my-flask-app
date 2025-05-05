@@ -10,7 +10,7 @@ def welcome():
 def form():
     if request.method == 'POST':
         name = request.form['name']
-        role = request.form['role']
+        role = request.form['Gamer']
         age = request.form['age']
         return render_template('3.html', name=name, role=role, age=age)
     return render_template('form.html')  # Serving the form initially
