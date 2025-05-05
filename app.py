@@ -12,7 +12,8 @@ def form():
         name = request.form['name']
         role = request.form['role']
         age = request.form['age']
-        return render_template('form.html')
-    return render_template('3.html', name=name, role=role, age=age)
+        return render_template('3.html', name=name, role=role, age=age)
+    return render_template('form.html')  # Serving the form initially
+
 if __name__ == '__main__':
     app.run(debug=True)
