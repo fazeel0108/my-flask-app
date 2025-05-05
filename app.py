@@ -1,29 +1,18 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route('/')
+def welcome():
+    return render_template('welcome.html')
 
-@app.route("/form", methods=["GET", "POST"])
+@app.route('/form', methods=['GET', 'POST'])
 def form():
-    if request.method == "POST":
-        name = request.form["name"]
-        role = request.form["role"].strip().lower()
-        age = request.form["age"].strip()
-
-        if not age.isdigit():
-            return f"Hello {name}, please enter a valid age."
-
-        age = int(age)
-        if role == "student":
-            return f"Hello {name}, your age is {age}, you got {age}% discount."
-        elif role == "teacher":
-            return f"Hello {name}, you can have it for free."
-        else:
-            return "Role not recognized."
-    return render_template("form.html")
-
-if __name__ == "__main__":
+    if request.method == 'POST':
+        name = request.form['name']
+        role = request.form['role']
+        age = request.form['age']
+        return render_template('form.html')
+    return render_template('3.html', name=name, role=role, age=age)
+if __name__ == '__main__':
     app.run(debug=True)
